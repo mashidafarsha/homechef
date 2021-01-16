@@ -1,0 +1,50 @@
+<body>
+  <!-- mian-content -->
+  <div class="main-content" id="home">
+    <div class="layer">
+      <!-- header -->
+
+      <!-- //header -->
+      <div class="container">
+        <!-- /banner -->
+        <div class="banner-info-w3layouts text-center ">
+          <div class="row pt-5">
+
+            <div class="col-md-6 m-auto pb-3" style="background-color: rgba(218, 209, 212, 0.582);">
+              <div class="container   mt-5  ">
+                <h2 class="text-center">LOGIN WITH OTP!!</h2>
+
+                <form action="/login" method="post">
+                  {{#if loginErr}}
+                  <p class="error">{{loginErr}}</p>
+                  {{/if}}
+                  <div class="form-group">
+                    <label for=""></label>
+                    <input type="text" class="form-control" name="mobile" placeholder="MOBILE:">
+                  </div>
+                   <button type="submit" class="form-control btn btn-danger  ">SEND OTP</button>
+                  <div class="form-group pt-2">
+                    <label for=""></label>
+                    <input type="text" class="form-control " name="otp" placeholder="OTP:">
+                  </div>
+
+                 <button type="submit" class="form-control btn btn-danger  ">VERIFY OTP</button>
+                   <a href="/signup" class="float-left" style="color: rgb(9, 5, 37);">sign up </a>
+                   
+                </form>
+
+
+
+
+              </div>
+
+
+            </div>
+
+          </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

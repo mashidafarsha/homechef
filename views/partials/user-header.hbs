@@ -1,0 +1,61 @@
+<!-- header -->
+<header>
+    <div class="container-fluid px-lg-5">
+        <!-- nav -->
+        <nav class="py-2 d-lg-flex">
+            <h3 style="color: brown;">Home chef</h3>
+            <label for="drop" class="toggle">Menu </label>
+            <input type="checkbox" id="drop" />
+            <ul class="menu mt-2 ml-auto">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/cart" class="scroll">cart <span class="badge badge-success"
+                            id="cart-count">{{cartCount}}</span></a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/view-bakers"> our backer </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about"></a> About </a>
+                </li>
+
+                {{#if userData}}
+                <li><a href="#contact" class="scroll">Orders</a></li>
+                {{/if}}
+
+
+                <li class="dropdown">
+                    <button class="btn btn-secondery dropdown-toggle" data-hover="pages" data-toggle="dropdown">
+                        {{#if userData}}
+                        {{userData.name}}
+                        {{else}}
+                        Account
+                        {{/if}}
+                    </button>
+                    <ul class="dropdown-menu">
+                        {{#if userData}}
+                        <li><a href="/logout">LOGOUT</a></li>
+                        {{else}}
+
+                        <li><a href="/login">LOGIN</a></li>
+                        {{/if}}
+                    </ul>
+
+
+
+                </li>
+                </li>
+
+
+
+
+            </ul>
+
+
+
+
+        </nav>
+        <!-- //nav -->
+
+    </div>
+</header>
+
+<!-- //header -->

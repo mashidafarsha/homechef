@@ -1,0 +1,72 @@
+<body>
+    <!-- mian-content -->
+    <div class="main-content" id="home">
+        <div class="layer">
+            <!-- header -->
+
+            <!-- //header -->
+            <div class="container">
+                <!-- /banner -->
+                <div class="banner-info-w3layouts text-center ">
+                    <h3> Special Items</h3>
+
+                    <section>
+                        <div class="container mt-5">
+                        <div class="row">
+                            {{#each product}}
+
+                            <div class="col-md-3 p-3">
+                                <div class="card" style="width: 15rem; height:21rem">
+                                    <img class="card-img-top"
+                                        src="/product-images/{{this._id}}.jpg"
+                                        alt="Card image cap"
+                                        style="height: 10rem;">
+                                
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{this.Name}}</h5>
+                                        <p class="card-text">Rs.{{this.price}}</p>
+                                        <p class="card-text">{{this.description}}</p>
+                                        <button onclick="addToCart('{{this._id}}')" class="btn btn-primary">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>    
+
+                        </div>
+                    </section>
+                  
+
+                    <div class="row order-info">
+                        <div class="middle mt-3 col-md-6 text-left">
+                            <ul class="social mb-4">
+                                <li><a href="#"><span class="fa fa-facebook icon_facebook"></span></a></li>
+                                <li><a href="#"><span class="fa fa-twitter icon_twitter"></span></a></li>
+                                <li><a href="#"><span class="fa fa-google-plus icon_google-plus"></span></a></li>
+                                <li><a href="#"><span class="fa fa-linkedin icon_linkedin"></span></a></li>
+                                <li><a href="#"><span class="fa fa-dribbble icon_dribbble"></span></a></li>
+                            </ul>
+
+                        </div>
+                        <div class="middle-right mt-md-3 col-md-6 text-right">
+                            <h6><span class="fa fa-phone"></span> Order Now : 123456789</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- //banner -->
+            </div>
+        </div>
+        <!--// mian-content -->
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

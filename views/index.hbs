@@ -1,0 +1,68 @@
+<body>
+    <!-- mian-content -->
+    <div class="main-content" id="home">
+        <div class="layer">
+            <!-- header -->
+
+            <!-- //header -->
+            <div class="container">
+                <!-- /banner -->
+                <div class="banner-info-w3layouts text-center ">
+                    <h3> Special Items</h3>
+
+                    <section>
+                        <div class="container mt-5">
+                        <div class="row">
+                            {{#each product}}
+
+                            <div class="col-md-3">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top"$$
+                                        src="{{this.Image}}"
+                                        alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{this.name}}</h5>
+                                        <p class="card-text">{{this.description}}</p>
+                                        <a href="#" class="btn btn-primary">ADD TO CART</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>    
+
+                        </div>
+                    </section>
+
+                    <div class="row order-info">
+                        <div class="middle mt-3 col-md-6 text-left">
+                            <ul class="social mb-4">
+                                <li><a href="#"><span class="fa fa-facebook icon_facebook"></span></a></li>
+                                <li><a href="#"><span class="fa fa-twitter icon_twitter"></span></a></li>
+                                <li><a href="#"><span class="fa fa-google-plus icon_google-plus"></span></a></li>
+                                <li><a href="#"><span class="fa fa-linkedin icon_linkedin"></span></a></li>
+                                <li><a href="#"><span class="fa fa-dribbble icon_dribbble"></span></a></li>
+                            </ul>
+
+                        </div>
+                        <div class="middle-right mt-md-3 col-md-6 text-right">
+                            <h6><span class="fa fa-phone"></span> Order Now : 123456789</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- //banner -->
+            </div>
+        </div>
+        <!--// mian-content -->
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

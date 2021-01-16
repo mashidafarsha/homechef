@@ -1,0 +1,34 @@
+<section>
+  <div class="col-md-8 m-auto">
+    <div class="cantainer pt-5">
+      <div class="row mt-4">
+        <a href="/admin/add-category" class="btn btn-success ml-auto ">Add Category</a>
+
+      </div>
+      <table class="table mt-5">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">CategoryName</th>
+            <th scope="col">Action</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          {{#each category}}
+          <tr>
+            <th scope="row">1</th>
+            <td>{{this.CategoryName}}</td>
+            <td>{{this.Action}}
+              <a href="/admin/edit-category" class="btn btn-primary">Edit</a>
+              <a href="/admin/delete-category" class="btn btn-danger">Delete</a>
+
+            </td>
+          </tr>
+          {{/each}}
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

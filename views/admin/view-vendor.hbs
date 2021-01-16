@@ -1,0 +1,39 @@
+
+<section>
+  <div class="col-md-8 m-auto">
+    <div class="cantainer pt-5">
+      <div class="row mt-4">
+        <a href="/admin/add-vendor" class="btn btn-success ml-auto ">Add vendor</a>
+
+      </div>
+        <table class="table mt-5">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">VendorName</th>
+      <th scope="col">ShopName</th>
+      <th>Image</th>
+      <th scope="col">Action</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {{#each vendors}}
+    <tr>
+      <th scope="row">1</th>
+      <td>{{this.VendorName}}</td>
+      <td>{{this.ShopName}}</td>
+      <td><img style="width: 50px;height:50px" src="/product-images/{{this._id}}.jpg" alt=""></td>
+      <td>{{this.Action}}
+        <a href="/admin/edit-vendor/{{this._id}}" class="btn btn-primary">Edit</a>    
+        <a href="/admin/delete-vendor/{{this._id}}" class="btn btn-danger">Delete</a>
+        
+      </td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>
+    </div>
+   </div> 
+</section>

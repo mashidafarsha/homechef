@@ -1,0 +1,50 @@
+<body>
+    <!-- mian-content -->
+    <div class="main-content" id="home">
+        <div class="layer">
+            <!-- header -->
+
+            <!-- //header -->
+            <div class="container">
+                <!-- /banner -->
+                <div class="banner-info-w3layouts text-center ">
+                    <section>
+                        <div class="container" style="background-color: rgba(214, 196, 170, 0.637);">
+                            <table class="table mt-5">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Date</th>
+                                        <th>Address</th>
+                                        <th>Pincode</th>
+                                        <th>Mobile</th>
+                                        <th scope="col">Amount</th>
+                                        <th scope="col">Payment</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each orders}}
+                                    <tr>
+                                        <td>{{this.date}}</td>
+                                        <td>{{this.deliveryDetails.address}}</td>
+                                        <td>{{this.deliveryDetails.pincode}}</td>
+                                        <td>{{this.deliveryDetails.mobile}}</td>
+                                        <td>{{this.totalAmount}}</td>
+                                        <td>{{this.paymentMethod}}</td>
+                                        <td>{{this.status}}</td>
+                                        <td>
+                                            <a href="/view-order-products/{{this._id}}" class="btn btn-primary">View
+                                                Products</a>
+                                        </td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
