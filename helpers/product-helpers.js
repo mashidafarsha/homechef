@@ -7,7 +7,12 @@ module.exports={
     addProduct:(product,callback)=>{
         
         console.log(product);
+        product.status=1;
+        product.created=new Date()
+        product.vendors_Id=objectId(product.vendorsId)
+
         product.price=parseInt(product.price)
+    
 
 
         

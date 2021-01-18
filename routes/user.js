@@ -155,9 +155,10 @@ router.get('/view-bakers',async(req,res)=>{
   res.render('user/view-bakers',{vendors,user:true,})
   })
 })
-router.get('/about',(req,res)=>{
-  res.render('user/about')
+router.get('/about-user',(req,res)=>{
+  res.render('user/about-user')
 })
+
 
 
 module.exports = router;

@@ -5,6 +5,7 @@ var router = express.Router();
 var productHelper = require('../helpers/product-helpers')
 const adminHelpers = require('../helpers/admin-helpers');
 const vendorHelpers = require('../helpers/vendor-helpers');
+const { LengthRequired } = require('http-errors');
 const verifyLogin = (req, res, next) => {
     if (req.session.loggedIn) {
         next()
@@ -45,10 +46,9 @@ router.get('/add-product', function (req, res) {
 })
 router.post('/add-product', (req, res) => {
     console.log(req.body);
-
-
+     req.body.vendorsId=req.session.vendorsId
     productHelpers.addProduct(req.body, (id) => {
-
+        
         let image = req.files.Image
         console.log(id);
         image.mv('./public/product-images/' + id + '.jpg', (err, done) => {
